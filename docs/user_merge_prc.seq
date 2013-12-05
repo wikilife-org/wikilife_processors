@@ -1,0 +1,36 @@
+http://www.websequencediagrams.com/
+
+title User merge Internal Processor
+
+UserMergeProcessor->TimelineProcessor: remove_by_user(old_user_id)
+TimelineProcessor->TimelineManager: remove_by_user(user_id)
+UserMergeProcessor->TimelineProcessor: remove_by_user(user_id)
+TimelineProcessor->TimelineManager: remove_by_user(user_id)
+UserMergeProcessor->TimelineProcessor: initialize_by_user(user_id)
+TimelineProcessor->TimelineProcessor: _validate_status
+TimelineProcessor->FinalLogManager: get_final_logs_by_user(user_id)
+TimelineProcessor->TimelineProcessor: _process_logs(final_logs_cursor, prc_status_mo)
+
+UserMergeProcessor->MoodProcessor: remove_by_user(old_user_id)
+UserMergeProcessor->MoodProcessor: remove_by_user(user_id)
+UserMergeProcessor->MoodProcessor: initialize_by_user(user_id)
+
+UserMergeProcessor->MedsProcessor: remove_by_user(old_user_id)
+UserMergeProcessor->MedsProcessor: remove_by_user(user_id)
+UserMergeProcessor->MedsProcessor: initialize_by_user(user_id)
+
+UserMergeProcessor->FoodProcessor: remove_by_user(old_user_id)
+UserMergeProcessor->FoodProcessor: remove_by_user(user_id)
+UserMergeProcessor->FoodProcessor: initialize_by_user(user_id)
+
+UserMergeProcessor->ComplaintProcessor: remove_by_user(old_user_id)
+UserMergeProcessor->ComplaintProcessor: remove_by_user(user_id)
+UserMergeProcessor->ComplaintProcessor: initialize_by_user(user_id)
+
+UserMergeProcessor->LogCategoryProcessor: remove_by_user(old_user_id)
+UserMergeProcessor->LogCategoryProcessor: remove_by_user(user_id)
+UserMergeProcessor->LogCategoryProcessor: initialize_by_user(user_id)
+
+UserMergeProcessor->UserLogProcessor: remove_by_user(old_user_id)
+UserMergeProcessor->UserLogProcessor: remove_by_user(user_id)
+UserMergeProcessor->UserLogProcessor: initialize_by_user(user_id)
