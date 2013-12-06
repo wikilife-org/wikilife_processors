@@ -25,3 +25,4 @@ class DAOs(object):
     exercise_dao = None
     location_dao = None
     aggregation_dao = None
+    aggregation_node_dao = None

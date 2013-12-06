@@ -23,19 +23,13 @@ FINAL_LOG_PROCESSOR = "wikilife_processors.processors.logs.final_log_processor.F
 
 """
 PROCESSORS = [
-    "wikilife_processors.processors.profile.profile_processor.ProfileProcessor"
-]
-"""
-"""
-PROCESSORS = [
     "wikilife_processors.processors.stats.aggregation_processor.AggregationProcessor", 
     "wikilife_processors.processors.profile.profile_processor.ProfileProcessor"
 ]
 """
-"""
-"""
 PROCESSORS = [
-    "wikilife_processors.processors.stats.aggregation_processor.AggregationProcessor" 
+    "wikilife_processors.processors.stats.aggregation_processor.AggregationProcessor",
+    "wikilife_processors.processors.stats.aggregation_node_processor.AggregationNodeProcessor" 
 ]
 
 DB_SETTINGS = {

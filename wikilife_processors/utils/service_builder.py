@@ -52,6 +52,7 @@ class ServiceBuilder(object):
         daos.exercise_dao = None #self._dao_bldr.build_exercise_dao()
         daos.location_dao = self._dao_bldr.build_location_dao()
         daos.aggregation_dao = self._dao_bldr.build_aggregation_dao()
+        daos.aggregation_node_dao = self._dao_bldr.build_aggregation_node_dao()
         return daos
 
     def _build_processor_builder(self):
