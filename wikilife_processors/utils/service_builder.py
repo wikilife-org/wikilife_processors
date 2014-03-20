@@ -87,12 +87,13 @@ class ServiceBuilder(object):
         #TODO move this out
         prc_bldr = self._build_processor_builder()
         user_prcs = prc_bldr.build_processor_list(["wikilife_processors.processors.timeline.timeline_processor.TimelineProcessor",
-        "wikilife_processors.processors.stats.mood_processor.MoodProcessor",
-        "wikilife_processors.processors.stats.meds_processor.MedsProcessor",
-        "wikilife_processors.processors.stats.food_processor.FoodProcessor",
-        "wikilife_processors.processors.stats.complaint_processor.ComplaintProcessor",
-        "wikilife_processors.processors.stats.log_category_processor.LogCategoryProcessor",
-        "wikilife_processors.processors.stats.user_log_processor.UserLogProcessor"])
+        #"wikilife_processors.processors.stats.mood_processor.MoodProcessor",
+        #"wikilife_processors.processors.stats.meds_processor.MedsProcessor",
+        #"wikilife_processors.processors.stats.food_processor.FoodProcessor",
+        #"wikilife_processors.processors.stats.complaint_processor.ComplaintProcessor",
+        #"wikilife_processors.processors.stats.log_category_processor.LogCategoryProcessor",
+        #"wikilife_processors.processors.stats.user_log_processor.UserLogProcessor"
+        ])
         oper_prc_map = {}
         oper_prc_map["user_merge"] = UserMergeProcessor(user_prcs)
 
